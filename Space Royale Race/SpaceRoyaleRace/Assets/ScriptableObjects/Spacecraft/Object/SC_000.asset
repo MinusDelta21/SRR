@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c2657f40f696a44b36bcb947ab9043, type: 3}
+  m_Name: SC_000
+  m_EditorClassIdentifier: 
+  name: SC_000
+  spacecraft: {fileID: 6968734816051246839, guid: ad6590d11c26d7e40b96bdb5721ed1fd,
+    type: 3}
+  description: A testing cube...
+  health: 999
+  minSpeed: 0.5
+  maxSpeed: 300
+  acceleration: 1.8
+  yaw: 80
+  roll: 1.2
+  locked: 1
+  cost: 0
