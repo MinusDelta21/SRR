@@ -100,6 +100,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
             spacecraft.transform.parent.rotation = Quaternion.Euler(0, 0, 0);
             spacecraft.transform.rotation = Quaternion.Euler(0, 0, 0);
             spacecraft.GetComponent<PlayerMovement>().enabled = true;
+            spacecraft.GetComponent<PlayerShoot>().enabled = true;
             spacecraft.transform.GetChild(0).GetComponent<RollSpaceship>().enabled = true;
         }
 
@@ -118,5 +119,13 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     public int CurrentScene
     {
         get { return currentScene; }
+    }
+    public int SelectionScene
+    {
+        get { return selectionScene; }
+    }
+    public int MultiplayerScene
+    {
+        get { return multiplayerScene; }
     }
 }

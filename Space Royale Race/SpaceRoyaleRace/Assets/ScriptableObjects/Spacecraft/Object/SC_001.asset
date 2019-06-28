@@ -18,9 +18,11 @@ MonoBehaviour:
 
     Geared for combat.'
   health: 100
-  minSpeed: 100
-  maxSpeed: 500
-  acceleration: 3
+  shield: 100
+  shieldRecovery: 5
+  minSpeed: 20
+  maxSpeed: 60
+  acceleration: 100
   yaw: 80
   roll: 2
   locked: 0

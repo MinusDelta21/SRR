@@ -30,10 +30,11 @@ public class SpawnController : MonoBehaviour
 
             spacecraft.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
 
-            player.transform.position = new Vector3(0, 1, 5);
+            player.transform.position = new Vector3(0, 4, 5);
             spacecraft.transform.position = player.transform.position;
 
             spacecraft.GetComponent<PlayerMovement>().enabled = false;
+            spacecraft.GetComponent<PlayerShoot>().enabled = false;
             spacecraft.transform.GetChild(0).GetComponent<RollSpaceship>().enabled = false;
             currentSelection = spacecraftDatas[index];
         }
@@ -61,7 +62,7 @@ public class SpawnController : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
-        selectionTime = 10.0f;
+        selectionTime = 5.0f;
     }
 
     // Update is called once per frame

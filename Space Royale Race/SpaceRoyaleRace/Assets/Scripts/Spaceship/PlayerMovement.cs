@@ -38,7 +38,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(GameObject.FindGameObjectWithTag("RoomController").GetComponent<PhotonRoom>().CurrentScene == 2)
+        if(GameObject.FindGameObjectWithTag("RoomController").GetComponent<PhotonRoom>().CurrentScene ==
+            GameObject.FindGameObjectWithTag("RoomController").GetComponent<PhotonRoom>().MultiplayerScene)
         {
             transform.parent.localRotation = Quaternion.Euler(0, 0, 0);
             transform.localScale = new Vector3(1.9f, 1.9f, 1.9f);
@@ -93,6 +94,16 @@ public class PlayerMovement : MonoBehaviour
     {
         get { return speed; }
         set { speed = value; }
+    }
+    public float MaxSpeed
+    {
+        get { return MAX_SPEED; }
+        set { MAX_SPEED = value; }
+    }
+    public float MinSpeed
+    {
+        get { return MIN_SPEED; }
+        set { MIN_SPEED = value; }
     }
     public float TurnMultiplier
     {

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: SC_002
   m_EditorClassIdentifier: 
   name: SC_002
-  spacecraft: {fileID: 6968734816051246839, guid: ad6590d11c26d7e40b96bdb5721ed1fd,
+  spacecraft: {fileID: 7419949110391227866, guid: 9cbb4058eb2b95d4d8ff66d991569806,
     type: 3}
   description: Another cube...
-  health: 10
-  minSpeed: 200
+  health: 100
+  minSpeed: 25
   maxSpeed: 700
-  acceleration: 1
+  acceleration: 3
   yaw: 80
   roll: 1.2
   locked: 0

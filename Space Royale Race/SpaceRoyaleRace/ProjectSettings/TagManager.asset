@@ -10,6 +10,10 @@ TagManager:
   - Money
   - GameMaster
   - Spaceship
+  - OffenseItem
+  - DefenseItem
+  - MobilityItem
+  - Spaceship
   layers:
   - Default
   - TransparentFX

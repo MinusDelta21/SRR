@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BasicShot
   m_EditorClassIdentifier: 
   prefab: {fileID: 5963713966215554417, guid: 2a7bc537e6a075d4c993a69ad34a0a65, type: 3}
-  speed: 400
-  damage: 10
+  speed: 10000
+  damage: 30
   fireRate: 3
-  heatAmount: 10
+  heatAmount: 5
   maxHeat: 100

@@ -22,5 +22,5 @@ MonoBehaviour:
   acceleration: 1.8
   yaw: 80
   roll: 1.2
-  locked: 1
+  locked: 0
   cost: 0

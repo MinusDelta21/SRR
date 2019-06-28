@@ -13,32 +13,33 @@ public class ProjectileData : ScriptableObject
     [SerializeField]
     float speed; //Speed at which bullet travels
     [SerializeField]
-    uint damage; //Damage projectile deals to spacecrafts
+    float damage; //Damage projectile deals to spacecrafts
     [SerializeField]
     float fireRate; //Rate at which it can be fired
     [SerializeField]
-    uint heatAmount; //how much heat goes up per shot
+    float heatAmount; //how much heat goes up per shot
     [SerializeField]
-    uint maxHeat; //Amount of heat before having to cool down
+    float maxHeat; //Amount of heat before having to cool down
 
 
     public float Speed
     {
         get { return speed; }
     }
-    public uint Damage
+    public float Damage
     {
         get { return damage; }
+        set { damage = value; }
     }
     public float FireRate
     {
         get { return fireRate; }
     }
-    public uint HeatAmount
+    public float HeatAmount
     {
         get { return heatAmount; }
     }
-    public uint MaxHeat
+    public float MaxHeat
     {
         get { return maxHeat; }
     }

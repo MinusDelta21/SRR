@@ -18,7 +18,10 @@ public class SpacecraftData : ScriptableObject
     [SerializeField] GameObject spacecraft;
     [TextArea] [SerializeField] string description;
     [Space][Space] //Health related variables
-    [SerializeField] uint health;
+    [SerializeField] float health;
+    [Space]
+    [SerializeField] float shield;
+    [SerializeField] float shieldRecovery;
     [Space][Space] //Movement related variables
     [SerializeField] float minSpeed;
     [SerializeField] float maxSpeed;
@@ -49,9 +52,23 @@ public class SpacecraftData : ScriptableObject
     /// <summary>
     /// Returns the Spacecraft's health
     /// </summary>
-    public uint Health
+    public float Health
     {
         get { return health; }
+    }
+    /// <summary>
+    /// Returns the Spacecraft's shield
+    /// </summary>
+    public float Shield
+    {
+        get { return shield; }
+    }
+    /// <summary>
+    /// Returns the Spacecraft's shield recovery rate
+    /// </summary>
+    public float RecoveryRate
+    {
+        get { return shieldRecovery; }
     }
     /// <summary>
     /// Returns the Spacecraft's minimum speed

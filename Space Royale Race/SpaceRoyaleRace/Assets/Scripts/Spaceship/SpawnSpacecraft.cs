@@ -13,6 +13,10 @@ public class SpawnSpacecraft : MonoBehaviour
     {
         GameObject.DontDestroyOnLoad(this);
         roomController = GameObject.FindGameObjectWithTag("RoomController").GetComponent<PhotonRoom>();
+        if (roomController.CurrentScene == 1)
+        {
+            transform.position = new Vector3(0, 4, 5);
+        }
         transform.position = new Vector3(0, 0, -2);
         transform.rotation = Quaternion.Euler(-15, 0, 0);
     }
