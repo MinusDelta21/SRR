@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour
     float currentHeat;
     GameObject projectilePrefab;
     bool overheated;
+    private Vector3 direction;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class PlayerShoot : MonoBehaviour
         currentHeat = 0;
         overheated = false;
         projectilePrefab = currentProjectile.Projectile;
+        direction = new Vector3(0, 0, 100);
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class PlayerShoot : MonoBehaviour
     public void Shoot()
     {
         GameObject shot = Instantiate(projectilePrefab, gameObject.transform);
-        shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * currentProjectile.Speed*10);
+        shot.GetComponent<Rigidbody>().velocity = transform.TransformDirection(direction);
 
         currentHeat += currentProjectile.HeatAmount;
         if(currentHeat >= currentProjectile.MaxHeat)
