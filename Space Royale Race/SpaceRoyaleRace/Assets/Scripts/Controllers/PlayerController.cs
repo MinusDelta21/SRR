@@ -7,7 +7,8 @@ public class PlayerController: MonoBehaviour
 {
 
     PlayerData playerData;
-    uint money;
+    public uint money;
+    public Text currencyText;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +29,16 @@ public class PlayerController: MonoBehaviour
     }
     public void SubtractMoney(uint amount)
     {
-        money -= amount;
-        playerData.Money = money;
+        if(money-amount>=0)
+        {
+            money -= amount;
+            playerData.Money = money;
+        }
     }
 
 
     private void Update()
     {
-        
+        currencyText.text = money.ToString();
     }
 }
