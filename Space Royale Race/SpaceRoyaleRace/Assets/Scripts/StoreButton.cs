@@ -11,9 +11,6 @@ public class StoreButton : MonoBehaviour
 
     public void Confirmation()
     {
-        clone = Instantiate(prefab, new Vector3(1000.0f, 450.0f, 0.0f), Quaternion.identity) as GameObject;
-        clone.transform.parent = GameObject.Find("StoreCanvas").transform;
-       
         for(int i=0;i<prefab.transform.childCount;i++)
         {
             Transform currentItem = prefab.transform.GetChild(i);
@@ -30,5 +27,8 @@ public class StoreButton : MonoBehaviour
                 currentItem.GetComponent<BuyItem>().itemCost = price;
             }
         }
+
+        clone = Instantiate(prefab, new Vector3(1000.0f, 450.0f, 0.0f), Quaternion.identity) as GameObject;
+        clone.transform.parent = GameObject.Find("StoreCanvas").transform;
     }
 }
