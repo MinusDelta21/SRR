@@ -9,7 +9,7 @@ public class BuyItem : MonoBehaviour
     
     public void Yes()
     {
-        if ((player.money - itemCost) >= 0)
+        if (player.money > itemCost)
         {
             player.SubtractMoney(itemCost);
             Destroy(transform.parent.gameObject);

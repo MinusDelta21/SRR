@@ -29,7 +29,7 @@ public class PlayerController: MonoBehaviour
     }
     public void SubtractMoney(uint amount)
     {
-        if(money-amount>=0)
+        if(money>amount)
         {
             money -= amount;
             playerData.Money = money;
