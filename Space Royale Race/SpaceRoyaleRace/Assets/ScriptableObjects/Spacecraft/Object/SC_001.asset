@@ -21,7 +21,7 @@ MonoBehaviour:
   shield: 100
   shieldRecovery: 5
   minSpeed: 20
-  maxSpeed: 60
+  maxSpeed: 80
   acceleration: 100
   yaw: 80
   roll: 2

@@ -8,22 +8,36 @@ public class AttackSpeedBoost : ItemData
 {
     [Space]
     [SerializeField]List<float> multiplier;
+    [SerializeField] List<float> multishotChance;
 
-    public float Multiplier(ItemTier tier)
+
+    public override void Multiplier(ItemTier tier, GameObject player)
     {
-        if (tier == ItemTier.I)
+        //Get component to be changed
+        player.GetComponent<PlayerShoot>().Damage = player.GetComponent<PlayerShoot>().Damage * multiplier[(int)tier];
+        float chance = Random.Range(0,101);
+        switch (tier)
         {
-            return multiplier[0];
+            case ItemTier.I:
+                if ((100 - chance) <= multishotChance[0]){
+                    player.GetComponent<PlayerShoot>().MultiShot = true;
+                }
+                break;
+            case ItemTier.II:
+                if((1 - chance) <= multishotChance[1]){
+                    player.GetComponent<PlayerShoot>().MultiShot = true;
+                }
+                break;
+            case ItemTier.III:
+                if ((1 - chance) <= multishotChance[2])
+                {
+                    player.GetComponent<PlayerShoot>().MultiShot = true;
+                }
+                break;
+            default:
+                player.GetComponent<PlayerShoot>().MultiShot = true;
+                break;
         }
-        else if (tier == ItemTier.II)
-        {
-            return multiplier[1];
-        }
-        else if (tier == ItemTier.III)
-        {
-            return multiplier[2];
-        }
-        else return 999999;
     }
-    
+
 }
